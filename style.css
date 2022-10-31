@@ -1,0 +1,102 @@
+/* optional imports that use the props */
+@import 'https://unpkg.com/open-props/src/extra/normalize.css';
+
+:root {
+	--dark-grey: #333;
+	--reg-gray: #423a3a;
+	--light-gray: #828282;
+	--red: #cd3a24;
+	--light: #fff;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+input {
+	all: unset;
+}
+
+.mobile-ctn {
+	text-align: center;
+}
+
+.logo {
+	padding-block: 2rem;
+	display: flex;
+	justify-content: center;
+}
+
+.hero img {
+	width: 100vw;
+}
+
+.content {
+	padding-inline: 2.5rem;
+	padding-block-start: 2.5rem;
+}
+
+.content header {
+	padding-block-end: 1.3rem;
+}
+
+.content h1 {
+	font-size: 4rem;
+	letter-spacing: 0.7rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: var(--reg-gray);
+}
+
+.content .important-text {
+	color: var(--red);
+	font-weight: 300;
+}
+
+.content p {
+	font-weight: 300;
+	font-size: 1.2rem;
+	color: var(--dark-grey);
+	line-height: 2.5rem;
+	letter-spacing: 0.1rem;
+	margin-block-end: 2.5rem;
+}
+
+.cta-container {
+	display: flex;
+	flex: 1;
+	block-size: 3.7rem;
+}
+
+.email-input,
+.btn-container {
+	display: flex;
+}
+
+.email-input {
+	text-align: left;
+	inline-size: 100%;
+	border: 1px solid var(--light-gray);
+	border-radius: 5px 0 0 5px;
+}
+.email-input input {
+	inline-size: 100%;
+	margin-inline-start: 1.2rem;
+	letter-spacing: 0.2rem;
+}
+
+.btn-container {
+	inline-size: 20%;
+	color: var(--light);
+	background-color: var(--dark-grey);
+	justify-content: center;
+	border-radius: 0 5px 5px 0;
+}
+@media (min-width: 640px) {
+	.main-wrapper {
+		block-size: 100vh;
+		background-image: url('./images/content/bg-textuare.png');
+	}
+	.left {
+	}
+}
