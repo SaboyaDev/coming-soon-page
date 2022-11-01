@@ -1,5 +1,19 @@
 /* optional imports that use the props */
 @import 'https://unpkg.com/open-props/src/extra/normalize.css';
+@font-face {
+	font-family: 'AdiHaus';
+	src: URL('https://assets.codepen.io/6060109/adihaus_regular.ttf')
+		format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'AdiHaus';
+	src: url('https://assets.codepen.io/6060109/adihaus_bold.ttf')
+		format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
 
 :root {
 	--dark-grey: #333;
@@ -7,10 +21,12 @@
 	--light-gray: #828282;
 	--red: #cd3a24;
 	--light: #fff;
+	--padding: 2.5rem;
 }
 
 body {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: AdiHaus;
+	min-width: 100%;
 }
 
 input {
@@ -21,8 +37,12 @@ input {
 	text-align: center;
 }
 
+.inner-container {
+	max-width: 767px;
+	margin-inline: auto;
+}
 .logo {
-	padding-block: 2rem;
+	padding: var(--padding);
 	display: flex;
 	justify-content: center;
 }
@@ -32,8 +52,8 @@ input {
 }
 
 .content {
-	padding-inline: 2.5rem;
-	padding-block: 2.5rem 4rem;
+	padding-inline: var(--padding);
+	padding-block: var(--padding) 4rem;
 }
 
 .content header {
@@ -57,9 +77,8 @@ input {
 	font-weight: 300;
 	font-size: 1.2rem;
 	color: var(--dark-grey);
-	line-height: 2.5rem;
-	letter-spacing: 0.1rem;
-	margin-block-end: 2.5rem;
+	line-height: var(--padding);
+	margin-block-end: var(--padding);
 }
 
 .cta-container {
@@ -92,11 +111,44 @@ input {
 	justify-content: center;
 	border-radius: 0 5px 5px 0;
 }
-@media (min-width: 640px) {
-	.main-wrapper {
-		block-size: 100vh;
+@media (min-width: 768px) {
+	body {
 		background-image: url('./images/content/bg-textuare.png');
+		background-position: center;
+		background-size: cover;
 	}
+	.container {
+		max-width: 1920px;
+		margin: 0 auto;
+		display: flex;
+		height: 100vh;
+		position: relative;
+	}
+
 	.left {
+		inline-size: 50%;
+		text-align: start;
+	}
+	.right {
+		background-image: url('https://assets.codepen.io/6060109/athlete-big.png');
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+		background-size: cover;
+		background-position: center;
+		inline-size: 50%;
+	}
+	.logo {
+		justify-content: start;
+	}
+	.hero {
+		display: none;
+	}
+	.content {
+		height: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.content header {
+		font-size: ;
 	}
 }
